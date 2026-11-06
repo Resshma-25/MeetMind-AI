@@ -20,7 +20,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://meet-mind-ai-pi.vercel.app/"
+        "https://meet-ai-a4zkz5d8d-resshma-25s-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
