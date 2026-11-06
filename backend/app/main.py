@@ -16,12 +16,13 @@ app = FastAPI(
 )
 
 # Allow local and deployed frontend communication
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://meet-ai-a4zkz5d8d-resshma-25s-projects.vercel.app",
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
