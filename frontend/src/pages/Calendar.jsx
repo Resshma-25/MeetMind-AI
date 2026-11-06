@@ -16,8 +16,9 @@ import {
   CheckCircle2
 } from "lucide-react";
 
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const API_URL = (
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"
+).replace(/\/+$/, "");
 
 function Calendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
